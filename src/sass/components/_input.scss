@@ -1,0 +1,13 @@
+input[type='text'],
+input[type='password'],
+input[type='Number'],
+select,
+textarea {
+  padding: 0.6rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  // color:$gray-light;
+  transition: all 0.8s;
+}

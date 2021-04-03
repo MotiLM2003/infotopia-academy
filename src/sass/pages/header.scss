@@ -1,0 +1,106 @@
+.header {
+  padding: 0 7.5rem;
+  height: 9.6rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 2px 10px var(--shadow-color);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  letter-spacing: 1.6px;
+  @include respond(tab-port) {
+    padding: 0 25px;
+  }
+
+  &__navigation {
+    display: flex;
+    @include respond(tab-land) {
+      display: none;
+    }
+    gap: 50px;
+    & li {
+      display: flex;
+      align-items: center;
+      //   margin: 0 15px 0 50px;
+      gap: 1.78rem;
+    }
+  }
+
+  &__login {
+    padding-left: 50px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 50px;
+      width: 3px;
+      background: #f4f4f9;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      margin-left: 10px;
+    }
+
+    &--mobile {
+      padding-left: 25px;
+    }
+  }
+
+  &__mobile-login {
+    display: none;
+    @include respond(tab-land) {
+      display: flex;
+    }
+  }
+
+  &__humburger {
+    border-top: 3px solid #b4b4b4;
+    border-radius: 1px;
+    width: 1.8em;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-top: 3px;
+  }
+  &__humburger::before {
+    content: '';
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 4px;
+    width: 1.8em;
+    display: block;
+    border-bottom: 3px solid #b4b4b4;
+
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  &__humburger::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 1.8em;
+    display: block;
+    border-radius: 11.5rem;
+    border-top: 3px solid #b4b4b4;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &__menu--closed {
+    border: 0px;
+    transition: 0.3s;
+    margin-top: 8px;
+  }
+
+  &__menu--closed::before {
+    transform: rotate(135deg) !important;
+    top: 4px;
+  }
+
+  &__menu--closed::after {
+    transform: rotate(222deg) !important;
+    top: 4px;
+    margin-left: 0;
+    width: 1.8em;
+  }
+}

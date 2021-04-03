@@ -1,0 +1,87 @@
+/* Reset */
+
+:root {
+  // COLORS
+  --primary-color: #71b9ad;
+  --secondary-color: var(--default-font-color);
+  // Shadows
+  --shadow-color: #00000033;
+  // Fonts
+  --default-font-color: #707070;
+}
+
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:link,
+*:visited,
+a {
+  color: var(--default-font-color);
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'AmpleSoft Pro';
+  src: url('../../fonts/AmpleSoftPro-Regular.ttf');
+}
+
+html {
+  font-size: 62.5%;
+  color: black !important;
+  // @include respond(tab-land) {
+  //   font-size: 62.5%;
+  // }
+  // @include respond(tab-port) {
+  //   font-size: 50%;
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%;
+  // }
+
+  // @include respond(phone) {
+  //   font-size: 31.2%;
+  // }
+}
+
+body {
+  font-family: 'AmpleSoft Pro', sans-serif;
+  font-weight: 400;
+
+  font-size: $default-font-size;
+
+  color: var(--default-font-color);
+
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  // changed to match design
+  width: 1546px;
+  max-width: calc(100vw - 120px);
+  @include respond(tab-port) {
+    max-width: 100%;
+  }
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 50px var(--shadow-color);
+  box-shadow: 0 0 50px var(--shadow-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.wrapper {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+}
